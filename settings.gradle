@@ -1,0 +1,3 @@
+rootProject.name = 'selenide_gradle'
+include 'api-tests'
+

@@ -1,0 +1,18 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+
+        <encoder>
+            <charset>utf8</charset>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name = "com.socks.api.services" level = "INFO" additivity ="false">
+        <appender-ref ref = "STDOUT" />
+    </logger>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

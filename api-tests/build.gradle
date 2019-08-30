@@ -1,0 +1,36 @@
+ext {
+    junitVersion = '5.3.1'
+    restAssuredVersion = '4.0.0'
+    jacksonDatabindVersion = '2.9.8'
+}
+
+
+dependencies {
+    implementation "io.rest-assured:rest-assured:$restAssuredVersion"
+    implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonDatabindVersion"
+
+    compile group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.12.1'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.28'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    compile group: 'ch.qos.logback', name: 'logback-core', version: '1.2.3'
+
+
+    testImplementation( "org.junit.jupiter:junit-jupiter-api:$junitVersion" )
+    testImplementation 'com.github.javafaker:javafaker:1.0.1'
+    testRuntimeOnly ( "org.junit.jupiter:junit-jupiter-engine:$junitVersion" )
+}
+
+test {
+    useJUnitPlatform()
+}
+
+allure {
+
+    autoconfigure = true
+    version = '2.12.1'
+    configuration = 'compile'
+
+    useJUnit5 {
+        version = '2.12.1'
+    }
+}
