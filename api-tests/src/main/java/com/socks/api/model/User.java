@@ -14,20 +14,46 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class User{
 
-	@JsonProperty("firstName")
-	private String firstName;
-
-	@JsonProperty("lastName")
-	private String lastName;
+	@JsonProperty("email")
+	private String email;
 
 	@JsonProperty("password")
 	private String password;
 
-	@JsonProperty("email")
-	private String email;
+	@JsonProperty("firstname")
+	private String firstname;
 
-	@JsonProperty("username")
-	private String username;
+	@JsonProperty("lastname")
+	private String lastname;
 
+	@JsonProperty("language")
+	private String language;
+
+	@JsonProperty("country")
+	private String country;
+
+	@JsonProperty("birthdate")
+	private String birthdate;
+
+	@JsonProperty("salutation")
+	private String salutation;
+
+	@JsonProperty("countryCode")
+	private int countryCode;
+
+	@JsonProperty("postCode")
+	private String postCode;
+
+	@JsonProperty("streetName")
+	private String streetName;
+
+	@JsonProperty("city")
+	private String city;
+
+	@JsonProperty("streetNr")
+	private String streetNr;
+
+	@JsonProperty("limitAmount")
+	private String limitAmount;
 
 }

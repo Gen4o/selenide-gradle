@@ -1,6 +1,6 @@
 ext {
     junitVersion = '5.3.1'
-    restAssuredVersion = '4.0.0'
+    restAssuredVersion = '4.1.1'
     jacksonDatabindVersion = '2.9.8'
 }
 

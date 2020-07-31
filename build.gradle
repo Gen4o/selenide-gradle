@@ -23,3 +23,4 @@ subprojects {
 task updateGradle (type: Wrapper) {
     gradleVersion = '4.10'
 }
+
